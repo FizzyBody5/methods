@@ -19,7 +19,12 @@
 #   * vacation - true only if the student is on vacation
 #
 # TODO - write sleep_in?
-
+def sleep_in?(weekday, vacation)
+    if vacation
+        return true
+    end
+    return !weekday
+end
 
 # monkey_trouble?
 #
@@ -34,7 +39,14 @@
 #   * b_smiling   - true only if monkey b is smiling
 #
 # TODO - write monkey_trouble?
+def monkey_trouble?(a_smiling, b_smiling)
+    if a_smiling && b_smiling || !a_smiling && !b_smiling
+        return true
+    else
+        return false
+    end
 
+end
 
 # sum_double
 #
@@ -47,7 +59,14 @@
 #   * b - an integer
 #
 # TODO - write sum_double
-
+def sum_double(a, b)
+    if a == b
+        return (a + b) * 2
+    else
+        return a + b
+    end
+    
+end
 
 
 
@@ -72,6 +91,24 @@
 #   * b - an integer
 #
 # TODO - write blackjack (tests first)
+def blackjack(a, b)
+    if a > 21 && b > 21
+        return 0
+    
+    elsif a < 21 && b < 21
+        if 21 - a < 21 - b
+            return a
+        else
+            return b
+        end
+    end
+    if a > 21 && b < 21
+        return b
+    elsif a < 21 && b > 21
+        return a
+    end
+    
+end
 
 
 # n_twice

@@ -55,4 +55,31 @@ describe 'Methods' do
 
   end
 
+  describe 'blackjack' do 
+
+    it 'returns number closest to 21 if one is over' do
+      blackjack(19, 22).must_equal(19)
+    end
+  
+    it 'returns 0 if both over 21' do
+      blackjack(22,23).must_equal(0)
+    end
+
+    it 'returns closes to 21' do
+      blackjack(1,2).must_equal(2)
+    end
+  end
+
+  describe 'n_twice' do
+    it 'integer lower than # of chars' do
+      n_twice("friends", 2).must_equal("frds")
+    end
+    it 'integer higher than # of chars' do
+      n_twice("hi", 4).must_equal("hihi")
+    end
+    it 'integer has same # of chars' do
+      n_twice()
+
+  end
+
 end
