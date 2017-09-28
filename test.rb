@@ -78,8 +78,20 @@ describe 'Methods' do
       n_twice("hi", 4).must_equal("hihi")
     end
     it 'integer has same # of chars' do
-      n_twice()
-
+      n_twice("hello", 5).must_equal("hellohello")
+    end
+  end
+  
+  describe "close_far" do
+    it 'b is close c is far' do
+      close_far(1, 2, 3).must_equal(true)
+    end
+    it 'b and c are close to a' do
+      close_far(1,2,2).must_equal(true)
+    end
+    it 'b is close but negative d is far but negative' do
+      close_far(1,-1,-5).must_equal(true)
+    end
   end
 
 end

@@ -125,7 +125,15 @@ end
 #   * n   - an integer
 #
 # TODO - write n_twice (tests first)
-
+def n_twice(str, n)
+    if str.length > n
+        first_letters = str[0...n]
+        last_letters = str[(str.length - n)..(str.length - 1)]
+        first_letters + last_letters
+    else
+        str + str
+    end
+end
 
 # close_far
 #
@@ -140,3 +148,10 @@ end
 #   * c - an integer
 #
 # TODO - write close_far (tests first)
+def close_far(a,b,c)
+    if (b - a).abs == 1 || (c - a).abs == 1 && (b - a).abs > 2 || (c - a).abs > 2
+        return true
+    else
+        return false
+    end
+end
